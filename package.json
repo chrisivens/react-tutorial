@@ -1,0 +1,35 @@
+{
+  "name": "reactthing",
+  "version": "1.0.0",
+  "description": "Just learning",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify browser.js -o static/bundle.js",
+    "watch": "watchify browser.js -o static/bundle.js --debug --verbose"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  },
+  "author": "Chris Ivens",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-watch": "^4.3.5",
+    "lodash": "^3.10.1",
+    "react": "^0.13.3",
+    "react-dom": "^0.14.0",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  }
+}
