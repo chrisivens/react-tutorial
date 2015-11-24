@@ -9,7 +9,7 @@ var meta = {
 
 meta.js = {
   main: {
-    input: meta.jsDir + "comments.js",
+    input: meta.jsDir + "main.js",
     destination: meta.assetsDir + 'js/'
   }
 };

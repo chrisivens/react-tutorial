@@ -15,12 +15,12 @@ module.exports = function(meta) {
     return b.bundle()
       .pipe(source(output))
       .pipe(gulp.dest(module.destination))
-      .pipe(livereload())
       .on('end', function() {
         if(module.watch) {
           console.log('BUILT - Still Watching ' + output);
         }
-      });
+      })
+      .pipe(livereload());
   };
 
   var createBundle = function(module, key, watch) {
